@@ -1,9 +1,8 @@
 .contact{
-    @include flex;
+    @include flex(space-between);
     @include padding;
     &__info{
         width: 34%;
-        border: 1px solid red;
         h4{
             @include font_2;
             color: #424F7B;
@@ -33,8 +32,59 @@
     }
     &__acardion{
         width: 60%;
-        border: 1px solid red;
-
+        .tests{
+            background-color: #ffffff;
+            width: 100%;
+            box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+             padding: 36px; 
+            border-radius: .4rem;
+            cursor: pointer;
+            @include transition;
+            p{
+                @include font_1($fs:1.8rem,$fw:400,$lh:2.7rem);
+                color: $secondary_color;
+                overflow: hidden;
+                height: 0;
+            }
+            label{
+                @include flex(space-between);
+                @include title_font($fs:2.6rem);
+                color: #424F7B;
+                svg{
+                    transform: rotate(180deg);
+                }
+            }
+            input{
+                display: none;
+            }
+            #c1:checked ~ #c11 {
+                height: 5.4rem;
+                
+            }
+            #c2:checked ~ #c22 {
+                height: 5.4rem;
+              }
+            #c3:checked ~ #c33 {
+                height: 5.4rem;
+            }
+            input:checked ~ label > svg{
+                transform: rotate(360deg);
+            }
+        }
         
+    }
+}
+@media screen and (max-width:768px) {
+    .contact{
+        flex-direction: column;
+        &__info{
+            width: 70%;
+            text-align: center;
+        }
+        &__acardion{
+            width: 90%;
+            margin-top: 50px;
+        }
     }
 }
