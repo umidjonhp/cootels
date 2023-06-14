@@ -1,0 +1,58 @@
+footer{
+    background-color: $footer_bg;
+    .footer{
+        @include flex(space-between);
+        padding: 12rem 0;
+        align-items: start;
+        &__left{
+            width: 20%;
+            @include flex;
+            flex-direction: column;
+            align-items: start;
+
+            h2{
+                @include font_1($fs:3.2rem, $fw:700, $lh:3.9rem );
+                font-family: 'Montserrat', sans-serif;
+                color: $third_color;
+                margin-bottom: 1.3rem;
+            }
+            ul{
+                a{
+                    @include font_2;
+                    line-height: 2.8rem;
+                    color: $third_color;
+                }
+            }
+            .footer__icon{
+                @include flex;
+                margin-top: 3.6rem;
+                gap: 2.4rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &__right{
+            width: 50%;
+            @include flex(space-between);
+            align-items: start;  
+            h6{
+                @include font_1($fs:1.6rem, $fw:700, $lh:1.936rem );
+                color: $third_color;
+            }
+        }
+        &__col{
+            @include flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 2.4rem;
+            a{
+                @include font_2;
+                color: #D9DBDE;
+                font-weight: 400;
+                color: $third_color;
+            }
+        }
+    }
+}  

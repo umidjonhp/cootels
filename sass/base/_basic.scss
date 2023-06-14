@@ -1,0 +1,32 @@
+ // Fonts
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+ // font-family: 'Montserrat', sans-serif;
+ @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+ // font-family: 'Inter', sans-serif;
+
+ // BASIC STYLE
+ *,*::before ,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+ }
+ html{
+    font-size: 62.5%;
+    //font-size: 10px;
+ }
+ a{
+    text-decoration: none;
+    display: inline-block;
+ }
+ ul{ 
+    list-style: none;
+ }
+ button{
+    border: none;
+    cursor: pointer;
+ }
+ .container{
+   max-width: 120rem;
+   margin: 0 auto;
+ }
